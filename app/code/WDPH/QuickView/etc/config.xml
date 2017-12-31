@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+	<default>
+		<wdph_quickview_main>
+			<general>
+				<enabled>1</enabled>
+				<hide_product_info_details>1</hide_product_info_details>
+				<hide_related>1</hide_related>
+				<hide_upsell>1</hide_upsell>
+				<hide_social>1</hide_social>
+			</general>			
+		</wdph_quickview_main>
+	</default>
+</config>
