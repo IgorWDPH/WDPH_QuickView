@@ -1,0 +1,18 @@
+<script>
+    requirejs(['jquery', 'wdph_quickview' ],
+        function($, wdph_quickview) 
+		{
+			$(document).ready(function()
+			{
+				$('.wdph_quickview_button').bind('click', function()
+				{
+					var productUrl = $(this).attr('data-quickview-url');
+                    if (productUrl.length)
+					{
+                        wdph_quickview.displayContent(productUrl);
+                    }
+				});
+			});			
+        });
+	window.weltpixel_quickview = <?php echo \Zend_Json::encode($block->getConfig()); ?>;
+</script>
