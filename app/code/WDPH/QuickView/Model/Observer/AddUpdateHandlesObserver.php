@@ -2,10 +2,7 @@
 namespace WDPH\QuickView\Model\Observer;
 
 class AddUpdateHandlesObserver implements \Magento\Framework\Event\ObserverInterface
-{     
-    const XML_PATH_QUICKVIEW_REMOVE_PRODUCT_IMAGE = 'weltpixel_quickview/general/remove_product_image';
-    const XML_PATH_QUICKVIEW_REMOVE_PRODUCT_IMAGE_THUMB = 'weltpixel_quickview/general/remove_product_image_thumb';
-    const XML_PATH_QUICKVIEW_REMOVE_AVAILABILITY = 'weltpixel_quickview/general/remove_availability';
+{   
     protected $scopeConfig;
     protected $request;
     protected $_storeManager;
@@ -31,21 +28,7 @@ class AddUpdateHandlesObserver implements \Magento\Framework\Event\ObserverInter
         if($observer->getData('full_action_name') != 'wdph_quickview_catalog_product_view') 
 		{
             return $this;
-        }
-        /*$productId= $this->request->getParam('id');
-        if(isset($productId))
-		{
-            try
-			{
-                $product = $this->productRepository->getById($productId, false, $this->_storeManager->getStore()->getId());
-            }
-			catch(\Magento\Framework\Exception\NoSuchEntityException $e)
-			{
-                return false;
-            }
-            $productType = $product->getTypeId();
-            $layout->getUpdate()->addHandle('weltpixel_quickview_catalog_product_view_type_' . $productType);
-        }*/             
+        }        
         if($this->quickviewHelper->getConfig('general/hide_product_info_details'))
 		{
             $layout->getUpdate()->addHandle('wdph_quickview_removeproductinfo_details');
