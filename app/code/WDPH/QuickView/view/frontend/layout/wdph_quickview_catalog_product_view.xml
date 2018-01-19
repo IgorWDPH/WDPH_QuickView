@@ -1,6 +1,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd" layout="1column">
     <update handle="catalog_product_view"/>
-	<body>
+	<body>		
+		<referenceBlock name="wdph.prevnext" remove="true"/>
 		<referenceBlock name="header.container" remove="true"/>
 		<referenceBlock name="page.top" remove="true"/>		
 		<referenceBlock name="footer-container" remove="true"/>        
