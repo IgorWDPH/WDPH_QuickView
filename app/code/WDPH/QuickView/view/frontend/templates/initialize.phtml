@@ -4,7 +4,7 @@
 		{
 			$(document).ready(function()
 			{
-				$('.wdph_quickview_button').bind('click', function()
+				$(document).on('click', '.wdph_quickview_button', function()
 				{
 					var productUrl = $(this).attr('data-quickview-url');
                     if (productUrl.length)
@@ -14,5 +14,5 @@
 				});
 			});			
         });
-	window.weltpixel_quickview = <?php echo \Zend_Json::encode($block->getConfig()); ?>;
+	window.wdph_quickview = <?php echo \Zend_Json::encode($block->getConfig()); ?>;
 </script>

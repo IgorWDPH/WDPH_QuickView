@@ -23,23 +23,16 @@ define([
                     beforeClose: function() {
                         $('[data-block="minicart"]').trigger('contentLoading');
                         $.ajax({
-							url: window.weltpixel_quickview.baseUrl + 'wdph_quickview/catalog/updatecart',
+							url: window.wdph_quickview.baseUrl + 'wdph_quickview/catalog/updatecart',
 							method: "POST"
 						});
                     },
                     close: function() {
                       
                     },
-                    afterClose: function() {
-						if (window.weltpixel_quickview.showMiniCartFlag)
-						{
-                            $("html, body").animate({ scrollTop: 0 }, "slow");
-                            setTimeout(function(){ $('.action.showcart').trigger('click'); }, 1000);
-						}
+                    afterClose: function() {						
                     },
-					ajaxContentAdded: function() {
-						// Ajax content is loaded and appended to DOM
-						console.log('LOADED');
+					ajaxContentAdded: function() {									
 					}
                   }
             });

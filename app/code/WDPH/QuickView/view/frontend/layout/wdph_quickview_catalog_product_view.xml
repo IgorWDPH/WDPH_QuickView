@@ -3,6 +3,7 @@
 	<body>		
 		<referenceBlock name="wdph.prevnext" remove="true"/>
 		<referenceBlock name="header.container" remove="true"/>
+		<referenceBlock name="skeleton_header" remove="true"/>
 		<referenceBlock name="page.top" remove="true"/>		
 		<referenceBlock name="footer-container" remove="true"/>        
 		<referenceBlock name="copyright" remove="true" />
